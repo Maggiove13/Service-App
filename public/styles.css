@@ -16,7 +16,6 @@ body {
 
 /* Navegación */
 .header {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
     position: relative;
     height: 100vh; /* significa que el header abarcaría el 100% de la altura de la ventana gráfica del navegador. */ 
 }
@@ -60,6 +59,7 @@ body {
 
 /* Barra de navegacion arriba */
 .nav-links {
+    font-family: "Montserrat", serif;
     display: flex; /* Activa Flexbox */
     justify-content: space-between; /* Distribuye los elementos a los extremos: izquierda y derecha */
     align-items: center; /* Alinea verticalmente en el centro */
@@ -77,29 +77,40 @@ body {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 20px;
     padding: 10px 15px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Montserrat", serif;
     transition: background-color 0.3s ease;
 }
 
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efecto de hover */
+    border: solid 1px #004e89;/* Efecto de hover */
     border-radius: 5px; /* Bordes redondeados en el hover */
 }
 
 .head-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Playfair Display", serif;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: top; /* Alinea el contenido al centro */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    font-family: "Oswald", serif;
+    margin-left: 30px; /* Ajusta el margen izquierdo */
     color: #ff6b35;
-    height: 100%;
-    text-align: center;
+    height: 80%; /* Ajusta el contenido al 80% de la altura del header en vez del 100% */
+    /*text-align: center; /* Alinea el texto al centro */
+    font-size: 30px;
+    padding-top: 10rem;
+}
+
+.head-content div {
+    color: inherit;
+}
+
+.head-content div p {
     font-size: 20px;
 }
+
 
 /* Galería de Imágenes */
 .header-gallery {
@@ -109,22 +120,22 @@ body {
 
 
 .gallery-section {
-    background-color: #ff6b35;
+    background-color:white;
     /* padding-right: 2rem; */
 }
 
 .gallery-grid {
     display: Grid;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    /*flex-wrap: wrap; */
+    gap: 1px;
+    /* justify-content: center; */
 }
 
 .gallery-item {
     /* overflow: hidden; */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 300px; 
+    /*text-align: center;  */
 }
 
 .gallery-item img {
@@ -141,12 +152,12 @@ body {
 
 /* Footer */
 .footer {
-    position: fixed; 
+    position: relative; 
     left: 0;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     background-color: #011638;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0px 20px 0px;
 }
