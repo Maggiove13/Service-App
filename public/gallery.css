@@ -1,0 +1,251 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background-image: url('../assets/imagenes/backgound.webp'); /* Ruta de la imagen */
+    /*background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    /*background-position: center; /* Centra la imagen */
+    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+    /*background-image: -webkit-linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);*/
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Navegación */
+.header {
+    background-image: url('../assets/imagenes/backgound.webp'); /* Ruta de la imagen */
+    background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative;
+    height: 100vh; /* significa que el header abarcaría el 100% de la altura de la ventana gráfica del navegador. */ 
+}
+
+
+.div-logo {
+    display: flex; /* Asegura que el logo se comporte correctamente dentro de flexbox */
+    align-items: center; /* Centra el contenido del logo verticalmente */
+}
+
+.card-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 3rem;
+    position: relative;
+    left: 1rem;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
+}
+
+.card-logo:hover {
+    transform: translateZ(6px) rotateX(360deg) rotateY(50deg);
+}
+
+.card_title {
+    color: white;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    /*right: 10px;*/
+    transform: translateY(-50%);
+    transition: transform .5s;
+    font: 900 1.5rem monospace;
+    font-family: "Major Mono Display", serif;
+}
+
+.card-logo:hover .card_title {
+    transform: translateZ(50px);
+}
+
+/* Barra de navegacion arriba */
+.nav-links {
+    background-image: -webkit-linear-gradient(90deg, #779DB8 12%, #15173c 100%);
+    font-family: "Montserrat", serif;
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos a los extremos: izquierda y derecha */
+    align-items: center; /* Alinea verticalmente en el centro */
+    list-style: none; /* Elimina los puntos de las listas */
+    /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
+    padding: 10px 20px; /* Agrega espacio interno */
+}
+
+.nav-links li {
+    /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
+    margin: 0 10px; /* Agrega separación horizontal entre los enlaces */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    font-family: "Montserrat", serif;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    border: solid 5px #190631;/* Efecto de hover */
+    border-radius: 20px; /* Bordes redondeados en el hover */
+}
+
+
+/* Pagina de Galeria */
+.header-gallery {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+}
+
+
+.main-gallery {
+    max-width: 1170px;
+    background-color: white;
+    /* background: -webkit-linear-gradient(90deg, #090f30,#000000,#190631);
+    background: linear-gradient(90deg, #090f30,#000000,#190631); */
+    flex: 1; /* Asegura que el main ocupe el espacio disponible */
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: #0086ad; */
+    margin: 0px;
+    list-style-type: none;
+}
+
+.gallery-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 0px;
+}
+
+.gallery-item img { 
+    width: 250px;  
+    object-fit: cover; 
+    /* height: 300px; */
+    /* display: block; */
+    /* transition: transform 0.5s; */
+} 
+
+.gallery-item:hover img {
+    transition: transform 0.5s;
+    transform: scale(1.5);
+} 
+
+
+/* Footer */
+.container{
+	max-width: 1170px; /* Ajusta el ancho máximo del contenido, el contenido no puede ser mas ancho que esto */
+	margin: auto;
+}
+
+.row{
+	display: flex;
+	/* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+
+.footer{
+    font-family: "Montserrat", serif;
+	background-color: #15173c;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Asegura que el footer se quede al final del contenido */
+}
+
+.footer-col{
+    width: 25%; 
+    padding: 0 15px;
+    align-items: center;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block; /* Asegura que el pseudo-elemento se ajuste al ancho del texto */
+}
+
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+    left: 50%; /* Centra el pseudo-elemento horizontalmente */
+	bottom: -10px; 
+	background-color: #e8702a;
+	height: 2px;
+	box-sizing: border-box;
+	width: 80px; /* Ajusta el ancho del pseudo-elemento */
+    transform: translateX(-50%); /* Centra el pseudo-elemento horizontalmente */
+}
+
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+        .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+        .footer-col{
+        width: 100%;
+    }
+}

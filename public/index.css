@@ -1,0 +1,316 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Navegación */
+.header {
+    background-image: url('../assets/imagenes/backgound.webp'); /* Ruta de la imagen */
+    background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative;
+    height: 100vh; /* significa que el header abarcaría el 100% de la altura de la ventana gráfica del navegador. */ 
+}
+
+
+.div-logo {
+    display: flex; /* Asegura que el logo se comporte correctamente dentro de flexbox */
+    align-items: center; /* Centra el contenido del logo verticalmente */
+}
+
+.card-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 3rem;
+    position: relative;
+    left: 1rem;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
+}
+
+.card-logo:hover {
+    transform: translateZ(6px) rotateX(360deg) rotateY(50deg);
+}
+
+.card_title {
+    color: white;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    /*right: 10px;*/
+    transform: translateY(-50%);
+    transition: transform .5s;
+    font: 900 1.5rem monospace;
+    font-family: "Major Mono Display", serif;
+}
+
+.card-logo:hover .card_title {
+    transform: translateZ(50px);
+}
+
+/* Barra de navegacion arriba */
+.nav-links {
+    background-image: -webkit-linear-gradient(90deg, #779DB8 12%, #15173c 100%);
+    font-family: "Montserrat", serif;
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos a los extremos: izquierda y derecha */
+    align-items: center; /* Alinea verticalmente en el centro */
+    list-style: none; /* Elimina los puntos de las listas */
+    /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
+    padding: 10px 30px; /* Agrega espacio interno */
+}
+
+.nav-links li {
+    /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
+    margin: 0 10px; /* Agrega separación horizontal entre los enlaces */
+}
+
+
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    font-family: "Montserrat", serif;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    border: solid 5px #004e89;/* Efecto de hover */
+    border-radius: 20px; /* Bordes redondeados en el hover */
+}
+
+
+
+.head-content {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los elementos en columna */
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten al ancho del contenedor */
+    justify-content: center; /* Alinea el contenido al centro verticalmente. */
+    /*align-items: center; /* Alinea el contenido al centro horizontalmente. */
+    margin: 80px 30px 0px; /* Ajusta el margen */
+    color: #e8702a;
+}
+
+.head-content div h1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 700;
+    font-size: 50px;
+    font-style: normal;
+}
+
+.head-content div p {
+    font-size: 20px;
+    font-family: "Oswald", serif;
+    margin-top: 0;
+}
+
+.head-content div a {
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+    margin-top: 0;
+}
+
+.btn-primary {
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    padding-top: 20px;
+    color: white;
+    background-color: #15173c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #005f89;
+}
+
+
+
+/**Aca Inicia la seccion del MAIN**/
+/*Contenedor del main*/
+.index-main {
+    background-color: #b3e804;
+    width: 100%; 
+    /* max-width: 1170px;   */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    padding: 30px;
+    text-align: justify;
+}
+
+.index-conteiner {
+    flex: 1;
+    display: flex; 
+    /* flex-wrap: wrap; */
+    flex-direction: column; /* Para que los elementos se vean uno debajo de otro */
+    border: solid 5px #004e89;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.index-conteiner h2 {
+    flex: 1;
+    background-color: white;
+    font-size: 27px;
+    font-family: "Montserrat", serif;
+    color: #181a4a;
+    justify-items:center;
+    text-align: center;
+}
+
+.index-conteiner p {
+    background-color: #3c152a;
+    font-size: 15px;
+    font-family: "Playfair Display", serif;
+    color: white;
+    text-align: justify;
+}
+
+
+.image-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0813df;
+    border-radius: 40px;
+}
+
+
+.image-conteiner img{
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.container {
+	max-width: 1170px; /* Ajusta el ancho máximo del contenido, el contenido no puede ser mas ancho que esto */
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer {
+    font-family: "Montserrat", serif;
+	background-color: #15173c;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Asegura que el footer se quede al final del contenido */
+}
+
+.footer-col{
+    width: 25%; 
+    padding: 0 15px;
+    align-items: center;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block; /* Asegura que el pseudo-elemento se ajuste al ancho del texto */
+}
+
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+    left: 50%; /* Centra el pseudo-elemento horizontalmente */
+	bottom: -10px; 
+	background-color: #e8702a;
+	height: 2px;
+	/* box-sizing: border-box; */
+	width: 80px; /* Ajusta el ancho del pseudo-elemento */
+    transform: translateX(-50%); /* Centra el pseudo-elemento horizontalmente */
+}
+
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+        .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+        .footer-col{
+        width: 100%;
+    }
+}
