@@ -6,8 +6,9 @@
     <title>3D Artists Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="public/index.css">
 </head>
 
 <body>
@@ -21,45 +22,56 @@
                         <figcaption class="card_title">3D Arts</figcaption>
                     </figure>
                 </span>
-                <li><a href="#">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
 
-    <!-- Hero Section -->
-        <div class="hero-content">
-            <h1>Unleashing Creativity in 3D</h1>
-            <p>Explore the work of talented 3D artists and renderists from around the world.</p>
-            <a href="#gallery" class="btn-primary">View Artists</a>
-        </div>
+    <!-- HEAD Section -->
+        <section class="head-content">
+            <div>
+                <h1>Unleashing Creativity in 3D</h1>
+                <p>Explore the work of talented 3D artists and renderists from around the world.</p>
+                <a href="#" class="btn-primary">View Artists</a>
+            </div>
+        </section>
     </header>
 
-    <!-- Galería -->
-    <main>
-        <section id="gallery" class="gallery">
-            <h2 class="section-title">Our Featured Works</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <img src="assets/images/render1.jpg" alt="Render 1">
-                <p class="artist-name">John Doe</p>
-            </div>
-            <div class="grid-item">
-                <img src="assets/images/render2.jpg" alt="Render 2">
-                <p class="artist-name">Jane Smith</p>
-            </div>
-            <div class="grid-item">
-                <img src="assets/images/render3.jpg" alt="Render 3">
-                <p class="artist-name">Mike Ross</p>
-            </div>
+    
+    <main class="index-main">
+        <div class="index-conteiner">
+            <h2>Our Mission</h2>
+            <p>En 3D Artists Hub, creemos firmemente en el poder transformador del arte y la tecnología para inspirar y cambiar el mundo. Nuestra misión es unir a los mejores talentos en arquitectura, renderización y arte 3D para crear experiencias visuales que no solo cautiven la imaginación, sino que también impulsen el progreso y la innovación.</p>
         </div>
-        </section>
+        <div class="image-conteiner">
+            <img src="./assets/svg/undraw_creative-team_wfty.svg">
+        </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 3D Artists Hub. All rights reserved.</p>
-        <p>Created by Maggi Ovelar</p>
-    </footer>
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>company</h4>
+					<ul>
+						<li><a href="#">about us</a></li>
+						<li><a href="#">our services</a></li>
+						<li><a href="#">privacy policy</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
