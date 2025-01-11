@@ -19,6 +19,16 @@ body {
     height: 100vh; /* significa que el header abarcaría el 100% de la altura de la ventana gráfica del navegador. */ 
 }
 
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
 
 .div-logo {
     display: flex; /* Asegura que el logo se comporte correctamente dentro de flexbox */
@@ -152,7 +162,23 @@ body {
     align-items: center;
     padding: 30px;
     gap: 40px; /* Espacio entre los contenedores */
+
+    /* Propiedades de animación */
+    animation: slideSection 1s ease-in-out;
 }
+
+/* Creamos la animación */
+@keyframes slideSection {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Contenedor de la imagen */
 .image-conteiner {
@@ -165,6 +191,9 @@ body {
     padding: 20px;
     max-width: 45%; /* Limita el ancho del contenedor de la imagen */
     order: 1;
+
+    /* Agregamos animación con delay */
+    animation: fadeIn 1s ease-in-out 0.3s both;
 }
 
 
@@ -178,6 +207,9 @@ body {
     padding: 20px;
     max-width: 50%; /* Limita el ancho del contenedor de texto */
     order: 2;
+
+    /* Agregamos animación con delay */
+    animation: fadeIn 1s ease-in-out 0.6s both;
 }
 
 .image-conteiner img {
@@ -203,7 +235,17 @@ body {
 }
 
 
-
+/* Animación para los elementos internos */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 
@@ -326,5 +368,97 @@ body {
 @media(max-width: 574px){
         .footer-col{
         width: 100%;
+    }
+}
+
+
+/* Ajustes para el header y nav en versión móvil */
+@media (max-width: 767px) {
+    /* Ajustes para la barra de navegación */
+    .nav-links {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .div-logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card-logo {
+        margin: 0;
+        left: 0;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Ajustes para el contenido del header */
+    .head-content {
+        margin: 40px 15px 0px;
+        text-align: center;
+    }
+
+    .head-content div h1 {
+        font-size: 35px; /* Reducimos el tamaño del título */
+    }
+
+    .head-content div p {
+        font-size: 16px; /* Reducimos el tamaño del párrafo */
+    }
+
+    /* Ajuste del botón */
+    .head-content div a {
+        display: inline-block;
+        top: 30px;
+    }
+
+    .btn-primary {
+        top: 30px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        max-width: 250px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .head-content div h1 {
+        font-size: 28px;
+    }
+
+    .head-content div p {
+        font-size: 14px;
+    }
+
+    .card_title {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustamos el padding y márgenes */
+    .nav-links {
+        padding: 5px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .head-content {
+        margin: 30px 10px 0px;
     }
 }
