@@ -79,6 +79,16 @@ body {
     padding: 10px 30px; /* Agrega espacio interno */
 }
 
+.nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
 .nav-links li {
     /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
     margin: 0 10px; /* Agrega separación horizontal entre los enlaces */
@@ -102,7 +112,6 @@ body {
 }
 
 
-
 .head-content {
     display: flex; /* Activa Flexbox */
     flex-direction: column; /* Alinea los elementos en columna */
@@ -116,12 +125,12 @@ body {
 .head-content div h1 {
     font-family: "Bebas Neue", serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 70px;
     font-style: normal;
 }
 
 .head-content div p {
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Oswald", serif;
     margin-top: 0;
 }
@@ -147,36 +156,17 @@ body {
     transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #005f89;
-}
-
-
 
 /**Aca Inicia la seccion del MAIN**/
 .index-main {
     background-color: #ffffff;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    justify-content: center; /* Distribuye el espacio entre los elementos */
     align-items: center;
-    padding: 30px;
-    gap: 40px; /* Espacio entre los contenedores */
+    padding: 50px;
+    gap: 10px; /* Espacio entre los contenedores */
 
-    /* Propiedades de animación */
-    animation: slideSection 1s ease-in-out;
-}
-
-/* Creamos la animación */
-@keyframes slideSection {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 
@@ -186,15 +176,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #0813df; */
-    border-radius: 40px;
-    padding: 20px;
-    max-width: 45%; /* Limita el ancho del contenedor de la imagen */
+    object-fit: cover;
+    border-radius: 20px;
+    max-width:100%; /* Limita el ancho del contenedor de la imagen */
     order: 1;
-
-    /* Agregamos animación con delay */
-    animation: fadeIn 1s ease-in-out 0.3s both;
 }
+
 
 
 /* Contenedor del texto */
@@ -208,14 +195,14 @@ body {
     max-width: 50%; /* Limita el ancho del contenedor de texto */
     order: 2;
 
-    /* Agregamos animación con delay */
-    animation: fadeIn 1s ease-in-out 0.6s both;
 }
 
 .image-conteiner img {
+    padding: 10px;
     width: 100%; /* La imagen se ajusta al contenedor */
     height: auto; /* Mantiene la proporción */
-    max-width: 250px; /* Tamaño máximo de la imagen */
+    max-width: 400px; /* Tamaño máximo de la imagen */
+    border-radius: 40px;
 }
 
 /* Estilos para el título y párrafo (los mantenemos igual) */
@@ -229,23 +216,12 @@ body {
 
 .index-conteiner p {
     font-size: 15px;
-    font-family: "Montserrat", serif;
+    font-family: "Playfair Display", serif;
     color: rgb(0, 0, 0);
     text-align: justify;
 }
 
 
-/* Animación para los elementos internos */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 
 
@@ -373,7 +349,7 @@ body {
 
 
 /* Ajustes para el header y nav en versión móvil */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
     /* Ajustes para la barra de navegación */
     .nav-links {
         flex-direction: column;
