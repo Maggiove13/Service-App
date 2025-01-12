@@ -6,6 +6,8 @@
 }
 
 body {
+    background: -webkit-linear-gradient(90deg, #090f30,#000000,#190631);
+    background: linear-gradient(90deg, #090f30,#000000,#190631); 
     /*background-image: url('../assets/imagenes/backgound.webp'); /* Ruta de la imagen */
     /*background-size: cover; /* Escala la imagen para que cubra todo el fondo */
     /*background-position: center; /* Centra la imagen */
@@ -103,43 +105,64 @@ body {
 
 
 .main-gallery {
-    max-width: 1170px;
-    background-color: white;
+    max-width: 1200px;
+    background-color: #ffffff; 
     /* background: -webkit-linear-gradient(90deg, #090f30,#000000,#190631);
-    background: linear-gradient(90deg, #090f30,#000000,#190631); */
+    background: linear-gradient(90deg, #090f30,#000000,#190631);  */
     flex: 1; /* Asegura que el main ocupe el espacio disponible */
+    padding: 0px;
+}
+
+
+.main-gallery div {
+    /* background-color: #00fc3f; */
+    color: #ffffff;
+    padding: 30px;
+    /* left: 40px; */
+    text-align: center;
+}
+
+.main-gallery div h1 {
+    background: -webkit-linear-gradient(90deg, #090f30,#000000,#190631);
+    background: linear-gradient(90deg, #090f30,#000000,#190631); 
+    /* background-color: blue; */
+    border-radius: 40px;
+    margin: 0px 200px;
     padding: 20px;
+    font-size: 30px;
+    font-family: "Oswald", serif;
 }
 
 .gallery-grid {
+    /* background-color: #ac2828; */
     display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
-    /* background-color: #0086ad; */
-    margin: 0px;
+    gap: 20px; /* Espacio uniforme entre elementos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsive */
+    padding: 30px 30px;
+    object-fit: contain;
+    margin: auto;
     list-style-type: none;
 }
 
 .gallery-item {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 5px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden; /* Previene que la imagen expandida afecte el layout */
 }
 
 .gallery-item img { 
-    width: 250px;  
-    object-fit: cover; 
-    /* height: 300px; */
-    /* display: block; */
-    /* transition: transform 0.5s; */
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 30px;
 } 
 
 .gallery-item:hover img {
-    transition: transform 0.5s;
-    transform: scale(1.5);
+    transform: scale(1.1);
 } 
 
 
@@ -242,10 +265,171 @@ body {
         width: 50%;
         margin-bottom: 30px;
     }
+
+
+    /* Ajustes para la barra de navegación */
+    .nav-links {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .div-logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card-logo {
+        margin: 0;
+        left: 0;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 7px;
+    }
+
+
+    .gallery-grid {
+        padding: 5px;
+    }
+
+    .gallery-item img {
+        width: 300px; 
+        height: 300px;
+        /* object-fit: cover; */
+    }
+
+    .main-gallery div h1 {
+        text-align: center;
+        font-size: 25px;
+        margin: 20px
+    }
 }
 
 @media(max-width: 574px){
         .footer-col{
         width: 100%;
+    }
+
+    .main-gallery {
+        padding: 5px;
+    }
+    
+    .main-grid {
+        padding: 0px 10px;
+    }
+
+    .gallery-grid {
+        padding: 5px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.29); /* Menos zoom en móviles */
+    }
+}
+
+
+/* Ajustes para el header y nav en versión móvil */
+@media (max-width: 480px) {
+    /* Ajustes para la barra de navegación */
+    .nav-links {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .div-logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card-logo {
+        margin: 0;
+        left: 0;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Ajustes para el contenido del header */
+    .head-content {
+        margin: 40px 15px 0px;
+        text-align: center;
+    }
+
+    .head-content div h1 {
+        font-size: 35px; /* Reducimos el tamaño del título */
+    }
+
+    .head-content div p {
+        font-size: 16px; /* Reducimos el tamaño del párrafo */
+    }
+
+    /* Ajuste del botón */
+    .head-content div a {
+        display: inline-block;
+        top: 30px;
+    }
+
+    .btn-primary {
+        top: 30px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        max-width: 250px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .head-content div h1 {
+        font-size: 28px;
+    }
+
+    .head-content div p {
+        font-size: 14px;
+    }
+
+    .card_title {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustamos el padding y márgenes */
+    .nav-links {
+        padding: 5px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .head-content {
+        margin: 30px 10px 0px;
     }
 }

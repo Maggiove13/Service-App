@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Renderistas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>3D Archis Hub - Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="public/gallery.css">
 </head>
 <body>
-    <header>
+    <!-- Navegación -->
+    <header class="header-gallery">
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="gallery.html">Galería de Renderistas</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+            <ul class="nav-links">
+                <span class="div-logo">
+                    <figure class="card-logo">
+                        <figcaption class="card_title">3D Arts</figcaption>
+                    </figure>
+                </span>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="artists">
-            <div class="artist-card">
-                <img src="artist1.jpg" alt="Artista 1">
-                <h3>Nombre del Artista 1</h3>
-                <p>Correo: artist1@example.com</p>
-                <p><a href="https://artist1.com" target="_blank">Sitio Web</a></p>
-            </div>
-            <div class="artist-card">
-                <img src="artist2.jpg" alt="Artista 2">
-                <h3>Nombre del Artista 2</h3>
-                <p>Correo: artist2@example.com</p>
-                <p><a href="https://artist2.com" target="_blank">Sitio Web</a></p>
-            </div>
-            <!-- Añade más artistas según sea necesario -->
-        </section>
+
+    <!-- Galería de Imágenes -->
+    <main class="main-gallery">
+        <div>
+            <h1>Gallery</h1>
+        </div>
+        <ul class="gallery-grid ">
+            <li class="gallery-item">
+                <img src="assets/imagenes/23.webp" alt="Render 1">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/1.webp" alt="Render 2">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/9.webp" alt="Render 3">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/11.webp">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/4.webp">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/5.webp">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/13.webp">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/21.webp">
+            </li>
+            <li class="gallery-item">
+                <img src="assets/imagenes/15.webp">
+            </li>
+        </ul>
     </main>
-    <footer>
-        <p>&copy; 2023 Artistas 3D y Renderistas</p>
-    </footer>
+
+    <!-- Footer -->
+    <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>company</h4>
+					<ul>
+						<li><a href="#">about us</a></li>
+						<li><a href="#">our services</a></li>
+						<li><a href="#">privacy policy</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
