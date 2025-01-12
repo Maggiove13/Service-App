@@ -3,7 +3,7 @@
 A static website showcasing the work of talented 3D artists and renderists from around the world. The site represents a fictional agency that connects users with various 3D professionals, from architects to animators.
 
 ## Live Demo
-Visit the website: [3D Artists Hub](#)
+Visit the website: [3D Archs](#)
 
 ## Project Structure
 3D-Artists-Hub/
@@ -18,7 +18,7 @@ Visit the website: [3D Artists Hub](#)
 │   ├── gallery.css
 │   └── artists.css
 │
-├── index2.html
+├── index.html
 ├── gallery.html
 └── artists.html
 
@@ -48,7 +48,7 @@ The website uses a carefully selected color palette that reflects a modern and p
 - #ffffff - White
 
 ## Pages
-- **Home (index2.html)**: Landing page
+- **Home (index.html)**: Landing page
 - **Gallery (gallery.html)**: Gallery of images
 - **Artists (artists.html)**: Information about the artists.
 
