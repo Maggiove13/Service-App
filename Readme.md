@@ -56,7 +56,7 @@ The website uses a carefully selected color palette that reflects a modern and p
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/Maggiove13/Service-App
+   git clone https://github.com/Maggiove13/Service-App.git
    ```
 2. **Open any of the HTML files in a web browser to view locally.**
 
