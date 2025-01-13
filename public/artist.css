@@ -6,50 +6,47 @@
 }
 
 body {
-    /*background-image: url('../assets/imagenes/backgound.webp'); /* Ruta de la imagen */
-    /*background-size: cover; /* Escala la imagen para que cubra todo el fondo */
-    /*background-position: center; /* Centra la imagen */
-    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
-    /*background-image: -webkit-linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);*/
     line-height: 1.6; /* Espaciado entre líneas */
 }
 
 
 .div-logo {
-    display: flex; /* Asegura que el logo se comporte correctamente dentro de flexbox */
-    align-items: center; /* Centra el contenido del logo verticalmente */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
 }
 
 .card-logo {
     width: 100px;
     height: 100px;
-    margin: 0 3rem;
+    /* margin: 0px 0px; */
     position: relative;
-    left: 1rem;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transition: transform .5s;
+    /* transform-style: preserve-3d; */
+    /* will-change: transform;
+    transition: transform .5s; */
 }
 
-.card-logo:hover {
+/* .card-logo:hover {
     transform: translateZ(6px) rotateX(360deg) rotateY(50deg);
-}
+} */
 
 .card_title {
+    text-align: center;
     color: white;
     position: absolute;
-    margin: 0;
-    top: 50%;
-    /*right: 10px;*/
-    transform: translateY(-50%);
-    transition: transform .5s;
-    font: 900 1.5rem monospace;
+    /* margin: 0; */
+    /* top: 50%;
+    right: 10px; */
+    /* transform: translateY(-50%);
+    transition: transform .5s; */
+    font-weight: 900; /* Peso de la fuente */
+    font-size: 30px; /* Tamaño de la fuente */
     font-family: "Major Mono Display", serif;
 }
-
-.card-logo:hover .card_title {
+/* .card-logo:hover .card_title {
     transform: translateZ(50px);
-}
+} */
 
 /* Barra de navegacion arriba */
 .nav-links {
@@ -61,19 +58,18 @@ body {
     align-items: center; /* Alinea verticalmente en el centro */
     list-style: none; /* Elimina los puntos de las listas */
     /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
-    padding: 10px 20px; /* Agrega espacio interno */
+    padding: 15px 40px; /* Agrega espacio interno */
 }
 
 .nav-links li {
-    /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
-    margin: 0 10px; /* Agrega separación horizontal entre los enlaces */
+    margin: 0 10px; 
 }
 
 .nav-links a {
     text-decoration: none;
-    color: rgb(253, 253, 253);
+    color: white;
     font-size: 20px;
-    padding: 10px 15px;
+    padding: 10px 40px;
     font-family: "Montserrat", serif;
     transition: background-color 0.3s ease;
 }
@@ -293,7 +289,6 @@ body {
 
 /*responsive*/
 @media(max-width: 767px){
-    
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
@@ -308,103 +303,38 @@ body {
     .image-conteiner {
         max-width: 100%;
     }
-}
 
-@media(max-width: 574px){
-        .footer-col{
-        width: 100%;
-    }
-}
-
-
-/* Ajustes para el header y nav en versión móvil */
-@media (max-width: 480px) {
-    /* Ajustes para la barra de navegación */
     .nav-links {
         flex-direction: column;
-        padding: 10px;
-        gap: 15px;
+        padding: 1px;
+        gap: 0px;
     }
 
     .div-logo {
         width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
     }
 
     .card-logo {
-        margin: 0;
-        left: 0;
+        margin: 30px 0px 0px;
+        padding: auto;
     }
 
-    /* Lista de navegación */
     .nav-links li {
         width: 100%;
         text-align: center;
-        margin: 5px 0;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 0px 20px;
     }
 
     .nav-links a {
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 100%;
-        padding: 10px;
-    }
-
-    /* Ajustes para el contenido del header */
-    .head-content {
-        text-align: center;
-    }
-
-    .head-content div h1 {
-        font-size: 35px; /* Reducimos el tamaño del título */
-    }
-
-    .head-content div p {
-        font-size: 16px; /* Reducimos el tamaño del párrafo */
-    }
-
-    /* Ajuste del botón */
-    .head-content div a {
-        display: inline-block;
-        top: 30px;
-    }
-
-    .btn-primary {
-        top: 30px;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        max-width: 250px;
-    }
-}
-
-/* Ajustes adicionales para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .head-content div h1 {
-        font-size: 28px;
-    }
-
-    .head-content div p {
-        font-size: 14px;
-    }
-
-    .card_title {
-        font-size: 1.2rem;
-    }
-
-    /* Ajustamos el padding y márgenes */
-    .nav-links {
         padding: 5px;
     }
 
-    .nav-links a {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-}
-
-@media (max-width: 768px) {
+    /*Aca Inicia la parte del contenido*/
     .team-container {
         gap: 20px;
     }
@@ -427,5 +357,47 @@ body {
 
     .card-content p {
         font-size: 13px;
+    }
+}
+
+
+
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        gap: 3px;
+    }
+
+    .div-logo {
+        width: 100%;
+    }
+
+    .card-logo {
+        margin: 30px 0px 0px;
+        padding: auto;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 0px 20px;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
     }
 }
