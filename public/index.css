@@ -32,33 +32,36 @@ body {
 
 .div-logo {
     display: flex; /* Asegura que el logo se comporte correctamente dentro de flexbox */
+    justify-content: center;
     align-items: center; /* Centra el contenido del logo verticalmente */
+    margin: 0;
 }
 
 .card-logo {
     width: 100px;
     height: 100px;
-    margin: 0 3rem;
+    /* margin: 0px 0px; */
     position: relative;
-    left: 1rem;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transition: transform .5s;
+    /* transform-style: preserve-3d; */
+    /* will-change: transform;
+    transition: transform .5s; */
 }
 
-.card-logo:hover {
+/* .card-logo:hover {
     transform: translateZ(6px) rotateX(360deg) rotateY(50deg);
-}
+} */
 
 .card_title {
+    text-align: center;
     color: white;
     position: absolute;
     margin: 0;
-    top: 50%;
-    /*right: 10px;*/
-    transform: translateY(-50%);
-    transition: transform .5s;
-    font: 900 1.5rem monospace;
+    /* top: 50%;
+    right: 10px; */
+    /* transform: translateY(-50%);
+    transition: transform .5s; */
+    font-weight: 900; /* Peso de la fuente */
+    font-size: 30px; /* Tamaño de la fuente */
     font-family: "Major Mono Display", serif;
 }
 
@@ -76,7 +79,7 @@ body {
     align-items: center; /* Alinea verticalmente en el centro */
     list-style: none; /* Elimina los puntos de las listas */
     /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
-    padding: 10px 30px; /* Agrega espacio interno */
+    padding: 15px 40px; /* Agrega espacio interno */
 }
 
 .nav::before {
@@ -90,8 +93,7 @@ body {
 }
 
 .nav-links li {
-    /* background-image: -webkit-linear-gradient(90deg, #6D93B6 30%, #0c457d 100%); */
-    margin: 0 10px; /* Agrega separación horizontal entre los enlaces */
+    margin: 10px 0px; 
 }
 
 
@@ -100,7 +102,7 @@ body {
     text-decoration: none;
     color: white;
     font-size: 20px;
-    padding: 10px 15px;
+    padding: 10px 40px;
     font-family: "Montserrat", serif;
     transition: background-color 0.3s ease;
 }
@@ -320,7 +322,7 @@ body {
 
 /*responsive*/
 @media(max-width: 767px){
-        .footer-col{
+    .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
@@ -334,46 +336,78 @@ body {
     .image-conteiner {
         max-width: 100%;
     }
-}
 
-@media(max-width: 574px){
-        .footer-col{
-        width: 100%;
-    }
-}
-
-
-/* Ajustes para el header y nav en versión móvil */
-@media (max-width: 574px) {
-    /* Ajustes para la barra de navegación */
     .nav-links {
         flex-direction: column;
-        padding: 10px;
-        gap: 15px;
+        padding: 1px;
+        gap: 0px;
     }
 
     .div-logo {
         width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
     }
 
     .card-logo {
-        margin: 0;
-        left: 0;
+        margin: 30px 0px 0px;
+        padding: auto;
     }
 
     /* Lista de navegación */
     .nav-links li {
         width: 100%;
         text-align: center;
-        margin: 5px 0;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 0px 20px;
     }
 
     .nav-links a {
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 100%;
-        padding: 10px;
+        padding: 5px;
+    }
+}
+
+
+
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        gap: 3px;
+    }
+
+    .div-logo {
+        width: 100%;
+    }
+
+    .card-logo {
+        margin: 30px 0px 0px;
+        padding: auto;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 0px 20px;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
     }
 
     /* Ajustes para el contenido del header */
@@ -407,6 +441,8 @@ body {
     }
 }
 
+
+
 /* Ajustes adicionales para pantallas muy pequeñas */
 @media (max-width: 574px) {
     .head-content div h1 {
@@ -433,5 +469,11 @@ body {
 
     .head-content {
         margin: 30px 10px 0px;
+    }
+
+    .div-logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: auto;
     }
 }
