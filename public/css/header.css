@@ -1,0 +1,179 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.div-logo {
+    display: flex; /* Asegura que el logo se comporte correctamente dentro de flexbox */
+    justify-content: center;
+    align-items: center; /* Centra el contenido del logo verticalmente */
+    margin: 0;
+}
+
+.card-logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.card_title {
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-weight: 900; /* Peso de la fuente */
+    font-size: 30px; /* Tamaño de la fuente */
+    font-family: "Major Mono Display", serif;
+}
+
+/* Barra de navegacion arriba */
+.nav-links {
+    background-image: -webkit-linear-gradient(90deg, #779DB8 12%, #15173c 100%);
+    font-family: "Montserrat", serif;
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos a los extremos: izquierda y derecha */
+    align-items: center; /* Alinea verticalmente en el centro */
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 15px 40px; /* Agrega espacio interno */
+}
+
+
+
+.nav-links li {
+    margin: 10px 0px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 40px;
+    font-family: "Montserrat", serif;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    border: solid 5px #004e89;/* Efecto de hover */
+    border-radius: 20px; /* Bordes redondeados en el hover */
+}
+
+
+
+
+/*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .index-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .index-conteiner,
+    .image-conteiner {
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 1px;
+        gap: 0px;
+    }
+
+    .div-logo {
+        width: 100%;
+    }
+
+    .card-logo {
+        margin: 30px 0px 0px;
+        padding: auto;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 0px 20px;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+
+/* Reponsive */
+@media(max-width: 574px){
+    /* Ajustes para la barra de navegación */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        gap: 3px;
+    }
+
+    .div-logo {
+        width: 100%;
+    }
+
+    .card-logo {
+        margin: 30px 0px 0px;
+        padding: auto;
+    }
+
+    /* Lista de navegación */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 0px 20px;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 574px) {
+    .card_title {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        padding: 5px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .div-logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: auto;
+    }
+}
+
+
+
+
+
