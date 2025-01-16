@@ -29,5 +29,5 @@ async function loadComponent(selector, url) {
 }
 
 // Cargar el header y el footer
-loadComponent("#nav-header", "components/header.html");
+loadComponent("#navbar", "components/header.html");
 loadComponent("#footer", "components/footer.html");
