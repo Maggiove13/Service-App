@@ -22,7 +22,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 150px;
     background: linear-gradient(to bottom, transparent, #ffffff);
 }
 
@@ -38,6 +38,8 @@
 }
 
 .head-content div {
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 1px #15173c;
     padding: 30px;
 }
 
@@ -140,6 +142,11 @@
 
 /*responsive*/
 @media(max-width: 767px){
+    .header::after {
+        width: 100%;
+        height: 70px;
+    }
+
     .index-main {
         flex-direction: column;
         gap: 20px;
