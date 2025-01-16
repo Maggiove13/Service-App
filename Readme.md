@@ -6,21 +6,33 @@ A static website showcasing the work of talented 3D artists and renderists from 
 Visit the website: https://3d-arch-hub.netlify.app/
 
 ## Project Structure
+````
 3D-Artists-Hub/
-│
 ├── assets/
-│   ├── favicon/
-│   │   └── favicon.ico
-│   └── imagenes/
+│   ├── imagenes/
+│   └── favicon/
+│
+├── components/
+│   ├── header.html
+│   └── footer.html
 │
 ├── public/
-│   ├── index.css
-│   ├── gallery.css
-│   └── artists.css
+│   ├── css/
+│   │   ├── header.css
+│   │   ├── footer.css
+│   │   ├── index.css
+│   │   ├── artist.css
+│   │   └── gallery.css
+│   │   └── form.css
+│   │
+│   └── js/
+│       └── frontend.js
 │
 ├── index.html
 ├── gallery.html
 └── artists.html
+└── form.html
+````
 
 
 ## Features
