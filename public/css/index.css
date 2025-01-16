@@ -1,0 +1,189 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+/* Navegación */
+.header {
+    background-image: url('/assets/imagenes/backgound.webp'); /* Ruta de la imagen */
+    background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative;
+    height: 100vh; /* significa que el header abarcaría el 100% de la altura de la ventana gráfica del navegador. */ 
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
+.head-content {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los elementos en columna */
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten al ancho del contenedor */
+    justify-content: center; /* Alinea el contenido al centro verticalmente. */
+    /*align-items: center; /* Alinea el contenido al centro horizontalmente. */
+    margin: 50px 30px 40px; /* Ajusta el margen */
+    color: #e8702a;
+    position: relative;
+}
+
+.head-content div {
+    padding: 30px;
+}
+
+
+.head-content div h1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 700;
+    font-size: 70px;
+    font-style: normal;
+}
+
+.head-content div p {
+    font-size: 25px;
+    font-family: "Oswald", serif;
+    margin-top: 0;
+}
+
+.head-content div a {
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+    margin-top: 0;
+}
+
+.btn-primary {
+    font-family: "Montserrat", serif;
+    position: relative;
+    text-decoration: none;
+    padding-top: 20px;
+    color: white;
+    background-color: #15173c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    transition: background-color 0.3s;
+}
+
+
+/**Aca Inicia la seccion del MAIN**/
+.index-main {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    padding: 50px;
+    gap: 10px; /* Espacio entre los contenedores */
+}
+
+
+/* Contenedor de la imagen */
+.image-conteiner {
+    flex: 1; /* Toma el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 20px;
+    max-width:100%; /* Limita el ancho del contenedor de la imagen */
+    order: 1;
+}
+
+
+/* Contenedor del texto */
+.index-conteiner {
+    flex: 1; /* Toma el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 50%; /* Limita el ancho del contenedor de texto */
+    order: 2;
+}
+
+.image-conteiner img {
+    width: 100%; /* La imagen se ajusta al contenedor */
+    height: auto; /* Mantiene la proporción */
+    max-width: 400px; /* Tamaño máximo de la imagen */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    border-radius: 40px;
+}
+
+/* Estilos para el título y párrafo (los mantenemos igual) */
+.index-conteiner h2 {
+    font-size: 27px;
+    font-family: "Montserrat", serif;
+    color: #181a4a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.index-conteiner p {
+    font-size: 15px;
+    font-family: "Playfair Display", serif;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+}
+
+
+
+/*responsive*/
+@media(max-width: 767px){
+    .index-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .index-conteiner,
+    .image-conteiner {
+        max-width: 100%;
+    }
+
+    .head-content div {
+        padding-top: 80px;
+    }
+
+    .head-content div h1 {
+        font-size: 28px;
+    }
+
+    .head-content div p {
+        font-size: 14px;
+    }
+
+    .head-content {
+        margin: 30px 10px 0px;
+    }
+
+    .head-content div .btn-primary {
+        top: 20px;
+        display: inline-block;
+        width: 100%;
+        font-size: 17px;
+        text-align: center;
+        max-width: 150px;
+        padding: 10px 10px;
+    }
+
+    .index-conteiner h2 {
+        font-size: 18px;
+    }
+
+    .index-conteiner p {
+        font-size: 12px;
+    }
+}
+
+
+
