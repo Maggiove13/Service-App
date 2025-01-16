@@ -3,7 +3,7 @@
 A static website showcasing the work of talented 3D artists and renderists from around the world. The site represents a fictional agency that connects users with various 3D professionals, from architects to animators.
 
 ## Live Demo
-Visit the website: https://maggiove13.github.io/Service-App/
+Visit the website: https://3d-arch-hub.netlify.app/
 
 ## Project Structure
 3D-Artists-Hub/
